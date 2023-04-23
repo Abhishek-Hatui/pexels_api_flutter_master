@@ -21,7 +21,7 @@ class _WallpaperState extends State<Wallpaper> {
 
   fetchapi() async {
     await http.get(Uri.parse('https://api.pexels.com/v1/curated?per_page=80'),
-        headers: {'Authorization': 'YOUR API KEY'}).then((value) {
+        headers: {'Authorization': 'YOUR API KEY'}).then((value) {////IDRAPI KEY DALOOO
       Map result = jsonDecode(value.body);
       setState(() {
         images = result['photos'];
@@ -36,7 +36,7 @@ class _WallpaperState extends State<Wallpaper> {
     });
     String url =
         'https://api.pexels.com/v1/curated?per_page=80&page=' + page.toString();
-    await http.get(Uri.parse(url), headers: {'Authorization': 'YOUR API KEY'}).then(
+    await http.get(Uri.parse(url), headers: {'Authorization': 'YOUR API KEY'}).then(/// IDR API KEY DALOOOO
         (value) {
       Map result = jsonDecode(value.body);
       setState(() {
